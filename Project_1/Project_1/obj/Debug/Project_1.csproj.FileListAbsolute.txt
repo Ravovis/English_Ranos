@@ -1,0 +1,6 @@
+C:\Users\root\Documents\GitHub\English_Ranos\Project_1\Project_1\bin\Debug\Project_1.exe.config
+C:\Users\root\Documents\GitHub\English_Ranos\Project_1\Project_1\bin\Debug\Project_1.exe
+C:\Users\root\Documents\GitHub\English_Ranos\Project_1\Project_1\bin\Debug\Project_1.pdb
+C:\Users\root\Documents\GitHub\English_Ranos\Project_1\Project_1\obj\Debug\Project_1.csprojResolveAssemblyReference.cache
+C:\Users\root\Documents\GitHub\English_Ranos\Project_1\Project_1\obj\Debug\Project_1.exe
+C:\Users\root\Documents\GitHub\English_Ranos\Project_1\Project_1\obj\Debug\Project_1.pdb
