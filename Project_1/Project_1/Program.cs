@@ -175,7 +175,7 @@ namespace Project_1
                 case 1:
                     DictionaryMenu();
                     break;
-                case 3:
+                case 2:
                     Environment.Exit(0);
                     break;
 
