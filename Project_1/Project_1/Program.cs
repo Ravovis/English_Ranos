@@ -9,6 +9,17 @@ namespace Project_1
 {
     class Program
     {
+        
+        struct word_meaning
+        {
+            public string word;
+            public string meaning;
+            public word_meaning(string s1, string s2)
+            {
+                word = s1;
+                meaning = s2;
+            }
+        }
         //--------------------------Output elements of menu
         static void MenuElement(int active, int current, string text)
         {
@@ -26,8 +37,6 @@ namespace Project_1
         }
 
         
-
-
         //----------------------------Train-Menu
         static void TaskTrain(int active)
         {
@@ -35,7 +44,45 @@ namespace Project_1
             switch (active)
             {
                 case 0:
-                    
+                    FileStream fs0 = new FileStream("words.txt", FileMode.Open);
+                    StreamReader sr0 = new StreamReader(fs0);
+                    List<word_meaning> list0 = new List<word_meaning>();
+                    string buf0;
+                    while (!sr0.EndOfStream)
+                    {
+                        buf0 = sr0.ReadLine();
+                        string[] s0 = buf0.Split('|');
+                        word_meaning wm0 = new word_meaning(s0[0], s0[1]);
+                        list0.Add(wm0);
+                    }
+                    sr0.Close();
+
+                    while (true)
+                    {
+                        Console.Clear();
+                        Random r0 = new Random();
+                        int nrand0 = r0.Next(list0.Count);
+                        Console.WriteLine(list0[nrand0].word);
+                        var KP = Console.ReadKey();
+                        if (KP.Key == ConsoleKey.Escape)
+                            return;
+                        Console.WriteLine(list0[nrand0].meaning);
+
+
+
+                        KP = Console.ReadKey();
+                        switch (KP.Key)
+                        {
+                            case ConsoleKey.Escape:
+                                return;
+                                break;
+
+                            case ConsoleKey.Enter:
+                                
+                                continue;
+                                break;
+                        }
+                    }
                     break;
 
                 default:
@@ -83,7 +130,6 @@ namespace Project_1
                         break;
                     case ConsoleKey.Enter:
                         TaskTrain(active);
-                        Console.ReadKey();
                         continue;
                         break;
                 }

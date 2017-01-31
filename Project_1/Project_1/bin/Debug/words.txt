@@ -1,3 +1,2 @@
-boy|мальчик|
-word|слово|
-hi|привет|
+﻿dog|a pet|
+yellow|color|
